@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import {
   AbsoluteFill,
+  Audio,
   Easing,
   Img,
   interpolate,
@@ -27,6 +28,7 @@ export type TweetHypeVideoProps = {
   headline: string;
   closingText: string;
   tweetImageName: string;
+  narrationAudioName: string;
 };
 
 // TWEET_HYPE_VIDEO_DEFAULT_PROPS defines the editable copy and source asset.
@@ -34,6 +36,7 @@ const TWEET_HYPE_VIDEO_DEFAULT_PROPS = {
   headline: "GPT-5.6，要来了？",
   closingText: "所有人都在等下一次跃迁",
   tweetImageName: "tweet.png",
+  narrationAudioName: "audio/TweetHypeVideo-narration.wav",
 } satisfies TweetHypeVideoProps;
 
 /** Renders the GPT-5.6 expectation teaser video. */
@@ -41,6 +44,7 @@ export const TweetHypeVideo = ({
   headline,
   closingText,
   tweetImageName,
+  narrationAudioName,
 }: TweetHypeVideoProps) => {
   // frame is the current render frame used by all motion.
   const frame = useCurrentFrame();
@@ -139,6 +143,7 @@ export const TweetHypeVideo = ({
 
   return (
     <AbsoluteFill className="tweet-hype-video">
+      <Audio src={staticFile(narrationAudioName)} volume={1} />
       <div className="tweet-hype-video__stars" />
       <div className="tweet-hype-video__beam tweet-hype-video__beam--left" />
       <div className="tweet-hype-video__beam tweet-hype-video__beam--right" />

@@ -54,3 +54,23 @@ pnpm build
 ## 当前视频
 
 - `TweetHypeVideo`
+
+## 本地生成语音
+
+项目使用 `Qwen3-TTS-12Hz-0.6B-CustomVoice` 在本地生成中文语音。模型权重会在首次运行时下载到 Hugging Face 本机缓存，不会写入仓库。
+
+先进入项目使用的 Conda 环境，并安装支持 RTX 5060 的 CUDA 13 PyTorch 和语音依赖：
+
+```console
+conda activate myenv
+python -m pip install --upgrade torch==2.11.0+cu130 torchaudio==2.11.0+cu130 torchvision==0.26.0+cu130 --index-url https://download.pytorch.org/whl/cu130
+python -m pip install -r requirements-tts.txt
+```
+
+生成或重新生成 `TweetHypeVideo` 的沉稳男声旁白：
+
+```console
+python scripts/generate_speech.py --text "GPT-5.6，要来了？发布前夜的想象力，正在升温。所有人都在等下一次跃迁。" --output "public/audio/TweetHypeVideo-narration.wav" --speaker Uncle_Fu --language Chinese
+```
+
+生成脚本要求 CUDA 可用，输出目录不存在时会自动创建。可通过 `--text`、`--output`、`--speaker` 和 `--language` 为其他视频生成语音。
