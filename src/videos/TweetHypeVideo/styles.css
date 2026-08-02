@@ -1,0 +1,171 @@
+.tweet-hype-video {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(74, 184, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #03070c 0%, #050b12 48%, #020407 100%);
+  color: #f6fbff;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.tweet-hype-video__stars {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.34) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 18%, rgba(74, 184, 255, 0.32) 0 1px, transparent 2px),
+    radial-gradient(circle at 82% 74%, rgba(255, 255, 255, 0.2) 0 1px, transparent 2px),
+    radial-gradient(circle at 26% 82%, rgba(74, 184, 255, 0.22) 0 1px, transparent 2px);
+  opacity: 0.72;
+}
+
+.tweet-hype-video__beam {
+  position: absolute;
+  top: -12%;
+  width: 250px;
+  height: 128%;
+  background: linear-gradient(180deg, transparent, rgba(74, 184, 255, 0.24), transparent);
+  filter: blur(26px);
+  opacity: 0.65;
+}
+
+.tweet-hype-video__beam--left {
+  left: 44px;
+  transform: rotate(18deg);
+}
+
+.tweet-hype-video__beam--right {
+  right: 12px;
+  transform: rotate(-14deg);
+}
+
+.tweet-hype-video__grid {
+  position: absolute;
+  inset: auto 0 0;
+  height: 520px;
+  background:
+    linear-gradient(rgba(74, 184, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 184, 255, 0.12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  opacity: 0.5;
+}
+
+.tweet-hype-video__intro {
+  position: absolute;
+  top: 190px;
+  left: 76px;
+  right: 76px;
+  text-align: center;
+}
+
+.tweet-hype-video__eyebrow,
+.tweet-hype-video__closing-kicker {
+  margin: 0;
+  color: #4ab8ff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.tweet-hype-video__headline {
+  margin: 28px 0 0;
+  font-size: 112px;
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.tweet-hype-video__subcopy {
+  margin: 34px auto 0;
+  max-width: 760px;
+  color: rgba(246, 251, 255, 0.76);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.36;
+}
+
+.tweet-hype-video__tweet-wrap {
+  position: absolute;
+  top: 575px;
+  left: 82px;
+  right: 82px;
+  transform-origin: center center;
+}
+
+.tweet-hype-video__tweet-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(74, 184, 255, 0.28);
+  border-radius: 28px;
+  background: #000;
+}
+
+.tweet-hype-video__tweet-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tweet-hype-video__scan {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  top: 0;
+  height: 92px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(246, 251, 255, 0.28),
+    rgba(74, 184, 255, 0.36),
+    transparent
+  );
+  mix-blend-mode: screen;
+}
+
+.tweet-hype-video__keywords {
+  position: absolute;
+  top: 1046px;
+  left: 74px;
+  right: 74px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+}
+
+.tweet-hype-video__keyword {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  max-width: 900px;
+  padding: 18px 36px;
+  border: 1px solid rgba(74, 184, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(3, 10, 18, 0.72);
+  box-shadow: 0 0 42px rgba(74, 184, 255, 0.16);
+  font-size: 54px;
+  font-weight: 780;
+  line-height: 1.06;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.tweet-hype-video__closing {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  bottom: 172px;
+  text-align: center;
+}
+
+.tweet-hype-video__closing-title {
+  margin: 26px auto 0;
+  max-width: 860px;
+  font-size: 82px;
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: 0;
+}

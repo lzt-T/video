@@ -9,9 +9,7 @@
     "@remotion/cli": "4.0.484",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.484",
-    "@remotion/tailwind-v4": "4.0.484",
-    "tailwindcss": "4.0.0"
+    "remotion": "4.0.484"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.484",
@@ -24,6 +22,8 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "video:dev": "node scripts/video-command.mjs dev",
+    "video:build": "node scripts/video-command.mjs build",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
