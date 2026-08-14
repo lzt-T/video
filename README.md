@@ -51,6 +51,18 @@ pnpm build
 
 如果某个视频需要覆盖默认值，可以在自己的 definition 中声明 `fps`、`width` 或 `height`。
 
+## 视觉规范
+
+视频统一使用适合 16:9 横屏观看的舒适科技编辑风：
+
+- 使用深色背景、低饱和冷蓝强调色和清晰的中文无衬线字体。
+- 默认保留 `120px` 横向安全区和 `80px` 纵向安全区。
+- 媒体容器统一使用 `16px` 圆角和低对比边框。
+- 动效以透明度和小幅位移为主，位移不超过 `24px`，缩放不超过 `1.04`。
+- 避免强辉光、舞台光束、扫描线和高密度装饰，让内容保持主要视觉层级。
+
+公共颜色、字体、圆角和安全区变量定义在 `src/index.css`。当前只有一个视频，不提前抽象场景组件；出现真实复用需求后再提取。
+
 ## 当前视频
 
 - `TweetHypeVideo`
@@ -67,10 +79,10 @@ python -m pip install --upgrade torch==2.11.0+cu130 torchaudio==2.11.0+cu130 tor
 python -m pip install -r requirements-tts.txt
 ```
 
-生成或重新生成 `TweetHypeVideo` 的沉稳男声旁白：
+生成或重新生成 `TweetHypeVideo` 的温暖柔和女声旁白：
 
 ```console
-python scripts/generate_speech.py --text "GPT-5.6，要来了？发布前夜的想象力，正在升温。所有人都在等下一次跃迁。" --output "public/audio/TweetHypeVideo-narration.wav" --speaker Uncle_Fu --language Chinese
+python scripts/generate_speech.py --text "GPT 五点六，要来了？发布前夜的想象力，正在升温。所有人都在等待，下一次跃迁。" --output "public/audio/TweetHypeVideo-narration.wav" --speaker Serena --language Chinese
 ```
 
 生成脚本要求 CUDA 可用，输出目录不存在时会自动创建。可通过 `--text`、`--output`、`--speaker` 和 `--language` 为其他视频生成语音。

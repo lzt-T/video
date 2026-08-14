@@ -7,7 +7,7 @@ from qwen_tts import Qwen3TTSModel
 
 
 MODEL_ID = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
-DEFAULT_SPEAKER = "Uncle_Fu"
+DEFAULT_SPEAKER = "Serena"
 DEFAULT_LANGUAGE = "Chinese"
 
 

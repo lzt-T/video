@@ -1,5 +1,19 @@
+:root {
+  --video-color-background: #0b0f14;
+  --video-color-surface: #121923;
+  --video-color-text: #f1f4f6;
+  --video-color-text-muted: #a7b0ba;
+  --video-color-accent: #6da9d2;
+  --video-color-border: rgba(241, 244, 246, 0.12);
+  --video-radius: 16px;
+  --video-safe-x: 120px;
+  --video-safe-y: 80px;
+  --video-font-sans: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC",
+    system-ui, sans-serif;
+}
+
 html,
 body {
   margin: 0;
-  background: #020407;
+  background: var(--video-color-background);
 }
